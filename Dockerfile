@@ -1,7 +1,7 @@
 FROM resin/rpi-raspbian
 
 RUN apt-get -y update
-RUN apt-get -y wget
+RUN apt-get -y install wget
 
 RUN cd
 RUN wget http://packages.erlang-solutions.com/debian/erlang_solutions.asc
