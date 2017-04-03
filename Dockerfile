@@ -9,5 +9,5 @@ EXPOSE 5984
 RUN update-rc.d couchdb defaults
 RUN cat /etc/couchdb/default.ini
 #RUN cat /etc/couchdb/local.ini
-#RUN sed -i '/TEXT/c\This line is removed by the admin.' /tmp/foo
+RUN sed -i '/bind_address = 127.0.0.1/c\bind_address = 0.0.0.0' /etc/couchdb/default.ini
 CMD couchdb
