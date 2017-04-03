@@ -20,8 +20,8 @@ RUN chown couchdb:couchdb /home/couchdb
 RUN wget http://mirror.symnds.com/software/Apache/couchdb/source/2.0.0/apache-couchdb-2.0.0.tar.gz
 RUN tar zxvf apache-couchdb-2.0.0.tar.gz
 RUN cd ./apache-couchdb-2.0.0 \
-sh ./configure --help #--prefix=/usr/local --with-js-lib=/usr/lib --with-js-include=/usr/include/js --enable-init 
-
+sh ./configure --help  
+#--prefix=/usr/local --with-js-lib=/usr/lib --with-js-include=/usr/include/js --enable-init
 RUN cd ./apache-couchdb-2.0.0 \
 make 
 RUN cd ./apache-couchdb-2.0.0 \
