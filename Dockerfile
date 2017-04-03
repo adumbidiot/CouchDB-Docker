@@ -9,4 +9,4 @@ EXPOSE 5984
 RUN update-rc.d couchdb defaults
 RUN cat /etc/couchdb/default.ini
 RUN cat /etc/couchdb/local.ini
-CMD couchdb -c
+CMD couchdb
