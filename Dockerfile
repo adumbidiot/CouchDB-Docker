@@ -25,6 +25,6 @@ make \
 make install
 
 RUN ln -s /usr/local/etc/init.d/couchdb /etc/init.d/couchdb
-RUN /etc/init.d/couchdb start
+#RUN /etc/init.d/couchdb start
 RUN update-rc.d couchdb defaults
 RUN curl http://127.0.0.1:5984/
