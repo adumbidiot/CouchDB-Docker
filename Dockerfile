@@ -1,7 +1,7 @@
 FROM resin/rpi-raspbian
 
 RUN apt-get -y update
-RUN apt-get -y install wget apt-utils
+RUN apt-get -y install wget apt-utils curl
 
 RUN cd
 RUN wget http://packages.erlang-solutions.com/debian/erlang_solutions.asc
@@ -23,3 +23,8 @@ RUN cd ./apache-couchdb-2.0.0 \
 ./configure --prefix=/usr/local --with-js-lib=/usr/lib --with-js-include=/usr/include/js --enable-init \
 make \
 make install
+
+RUN ln -s /usr/local/etc/init.d/couchdb /etc/init.d/couchdb
+RUN /etc/init.d/couchdb start
+RUN update-rc.d couchdb defaults
+RUN curl http://127.0.0.1:5984/
