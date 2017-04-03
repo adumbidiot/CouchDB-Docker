@@ -10,5 +10,4 @@ RUN update-rc.d couchdb defaults
 RUN cat /etc/couchdb/default.ini
 #RUN cat /etc/couchdb/local.ini
 RUN sed -i '/bind_address = 127.0.0.1/c\bind_address = 0.0.0.0' /etc/couchdb/default.ini
-RUN sed -i '/5984/c\6000' /etc/couchdb/default.ini
 CMD couchdb
