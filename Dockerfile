@@ -34,3 +34,4 @@ ls
 RUN cd /usr/local/etc \
 ls
 EXPOSE 5984
+RUN echo "done"
