@@ -32,4 +32,3 @@ ls
 #RUN /etc/init.d/couchdb start
 #RUN update-rc.d couchdb defaults
 EXPOSE 5984
-RUN curl http://127.0.0.1:5984/
