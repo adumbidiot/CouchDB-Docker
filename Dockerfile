@@ -21,7 +21,8 @@ RUN wget http://mirror.symnds.com/software/Apache/couchdb/source/2.0.0/apache-co
 RUN tar zxvf apache-couchdb-2.0.0.tar.gz
 RUN cd ./apache-couchdb-2.0.0 \
 ./configure --prefix=/usr/local --with-js-lib=/usr/lib --with-js-include=/usr/include/js --enable-init \
-make \
+make 
+RUN cd ./apache-couchdb-2.0.0 \
 make install
 
 RUN ln -s /usr/local/etc/init.d/couchdb /etc/init.d/couchdb
