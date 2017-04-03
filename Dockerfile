@@ -16,3 +16,9 @@ RUN apt-get install -y libcurl4-openssl-dev libicu-dev
 RUN useradd -d /home/couchdb couchdb
 RUN mkdir /home/couchdb
 RUN chown couchdb:couchdb /home/couchdb
+
+RUN wget http://mirror.symnds.com/software/Apache/couchdb/source/2.0.0/apache-couchdb-2.0.0.tar.gz
+RUN tar zxvf apache-couchdb-2.0.0.tar.gz
+RUN cd apache-couchdb-2.0.0/
+RUN ./configure
+RUN make release
