@@ -31,8 +31,6 @@ ls
 #RUN service couchdb start
 #RUN /etc/init.d/couchdb start
 #RUN update-rc.d couchdb defaults
-RUN cd /usr/local \
-ls
-RUN dir /usr/local/etc
+RUN dir /usr/bin
 EXPOSE 5984
 RUN echo "done"
