@@ -8,5 +8,5 @@ RUN mkdir /var/run/couchdb
 EXPOSE 5984
 RUN echo "#!/bin/bash" >> ./test.sh
 RUN echo "couchdb" > ./test.sh
-RUN echo "cat /var/run/couchdb/couch.ini" > ./test.sh
+RUN echo "dir /var/run/couchdb" > ./test.sh
 CMD sh ./test.sh
