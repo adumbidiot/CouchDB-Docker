@@ -20,4 +20,5 @@ RUN chown couchdb:couchdb /home/couchdb
 RUN wget http://mirror.symnds.com/software/Apache/couchdb/source/2.0.0/apache-couchdb-2.0.0.tar.gz
 RUN tar zxvf apache-couchdb-2.0.0.tar.gz
 RUN ./apache-couchdb-2.0.0/configure
+RUN ls ./apache-couchdb-2.0.0
 RUN make release
