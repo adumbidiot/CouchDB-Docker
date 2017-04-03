@@ -28,7 +28,7 @@ make install
 RUN ln -s /usr/local/etc/init.d/couchdb /etc/init.d/couchdb
 RUN cd /etc/init.d \
 ls
-RUN service couchdb start
+#RUN service couchdb start
 #RUN /etc/init.d/couchdb start
 #RUN update-rc.d couchdb defaults
 EXPOSE 5984
