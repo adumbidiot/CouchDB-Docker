@@ -9,4 +9,4 @@ EXPOSE 5984
 RUN echo "#!/bin/bash" >> ./test.sh
 RUN echo "couchdb -d" > ./test.sh
 RUN echo "cat /var/run/couchdb/couch.ini" > ./test.sh
-CMD ./test.sh
+CMD sudo ./test.sh
